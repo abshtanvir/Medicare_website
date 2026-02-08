@@ -8,6 +8,7 @@ import { Home } from './pages/Home';
 import { Login } from './pages/Login';
 import { Medicines } from './pages/Medicines';
 import { LabTests } from './pages/LabTests';
+import { LabTestDetails } from './pages/LabTestDetails';
 import { Cart } from './pages/Cart';
 import { Dashboard } from './pages/Dashboard';
 import { AdminDashboard } from './pages/AdminDashboard';
@@ -40,6 +41,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/medicines" element={<Medicines />} />
                 <Route path="/lab-tests" element={<LabTests />} />
+                <Route path="/lab-tests/:id" element={<LabTestDetails />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route
                   path="/dashboard"

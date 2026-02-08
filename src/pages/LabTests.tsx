@@ -1,9 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { MOCK_LAB_TESTS } from '../lib/mockData';
-import { useCart } from '../context/CartContext';
 import { TestTube, CheckCircle } from 'lucide-react';
 
 export function LabTests() {
-    const { addToCart } = useCart();
+    const navigate = useNavigate();
 
     return (
         <div className="flex-1 w-full max-w-[1440px] mx-auto px-6 lg:px-20 py-10">
@@ -50,7 +50,7 @@ export function LabTests() {
                             </div>
 
                             <button
-                                onClick={() => addToCart(test)}
+                                onClick={() => navigate(`/lab-tests/${test.id}`)}
                                 className="w-full bg-primary text-background-dark font-black py-3 rounded-lg hover:brightness-95 transition-all"
                             >
                                 Book Now
